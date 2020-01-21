@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <title>RPA Task</title>
+        <style>
+            .small-middle-container{
+	            margin: auto;
+	            width: 40%;
+            }
+            html, body {
+             height: 100%;
+            }
+        </style>
+    </head>
+    <body class="bg-dark">
+      {% if error == 1 %}
+        <div class="container h-100 d-flex justify-content-center mt-10">
+          <div class="text-dark text-center jumbotron my-auto">
+            <h3>Oops! Something went wrong</h3>
+            <h2>Please Relogin and Try Again</h2>
+          </div>
+        </div>
+      {% else %}
+        <div class="container">
+        <h2 class="text-white text-center p-5">Invoice Submission Form</h2>
+      <div class="small-middle-container">
+            <form action="/invoice" method="POST">
+                <div class="form-group text-white">
+                    <label for="formGroupExampleInput">Date of Issue:</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput">
+                </div>
+                <div class="form-group text-white">
+                    <label for="formGroupExampleInput">Invoice Number:</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput">
+                </div>
+                <div class="form-group text-white">
+                    <label for="formGroupExampleInput">Company Name:</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput">
+                </div>
+                <div class="form-group text-white">
+                    <label for="formGroupExampleInput">Company Address:</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput">
+                </div>
+                <div class="form-group text-white">Description:</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput">
+                </div>
+                <div class="form-group text-white">Total Price:</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput">
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+        </div>
+      {% endif %}
+    </body>
+</html>
+
